@@ -15,6 +15,6 @@ app.use(express.urlencoded({extended:true}));
 app.use('/autos', router);
 
 app.listen(port, ()=>{
-    console.log(`Servidor UP corriendo en http://localhost:${port}/autos`)
+    console.log(`Servidor UP corriendo en http://localhost:${port}/`);
 
 });

@@ -12,4 +12,4 @@ const ProductSchema = new Schema(
 
 );
 
-export default mongoose.model('AutosModel', ProductSchema)
+export default mongoose.model('AutosModel', ProductSchema);
