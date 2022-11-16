@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
+import CompShowProducts from './Product/ShowAutos';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+
 function App() {
   return (
     <div className="App">
@@ -16,8 +20,17 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          
         </a>
+
+
+        
       </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path='' element={<CompShowProducts/>}></Route>;
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
