@@ -25,17 +25,21 @@ const CompShowProducts = () => {
   };
 
   // enseguida hacemos el delete
-  const deleteProduct = async(id)=>{
+  const deleteProduct = async (id) => {
     axios.delete(`${URI}${id}`);
     //una vez borre el registro que me vuelva a mostrar los que quedan
     getProducts();
-  }
+  };
 
   //retornemos la respuesta al html utilizando jsx
   return (
     <div className="container p-3 border bg-light">
       <div className="row justify-content-center gap-3 my-2">
-      <h1> Lista de vehículos disponibles - <i class="fa-solid fa-list-check"></i></h1>
+        <h1>
+          {" "}
+          Lista de vehículos disponibles -{" "}
+          <i class="fa-solid fa-list-check"></i>
+        </h1>
         <div className="col-7 border rounded-3 p-3 my-auto border bg-white">
           <table className="table">
             <thead>
@@ -52,8 +56,15 @@ const CompShowProducts = () => {
                   <td>{product.stock}</td>
                   <td>{product.precio}</td>
                   <td>
-                    <Link to={`/edit/${product._id}`}className='btn btn-info'>Editar <i class="fa-solid fa-pen-to-square"></i></Link>
-                    <button onClick={()=>deleteProduct(product._id)} className='btn btn-danger'>Borrar <i class="fa-solid fa-trash"></i></button>
+                    <Link to={`/edit/${product._id}`} className="btn btn-info">
+                      Editar <i class="fa-solid fa-pen-to-square"></i>
+                    </Link>
+                    <button
+                      onClick={() => deleteProduct(product._id)}
+                      className="btn btn-danger"
+                    >
+                      Borrar <i class="fa-solid fa-trash"></i>
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -61,20 +72,23 @@ const CompShowProducts = () => {
           </table>
         </div>
         <div className="col border rounded-3  p-3">
-        <div className="col border rounded-3 p-3 bg-white" >
-        <h1><i class="fa-sharp fa-solid fa-car-side"></i></h1>
-        <h3>Crear nuevo auto </h3>
-        <Link to ="/create" className= "btn btn-primary mt-2 mt-4">Ingresar Vehículo <i class="fa-solid fa-plus"></i></Link> 
-        <p>Haga click en el boton para ingresar un nuevo producto,
-         luego ingrese los datos en la ventana a continuacion</p>
-
-        </div>
-
+          <div className="col border rounded-3 p-3 bg-white">
+            <h1>
+              <i class="fa-sharp fa-solid fa-car-side"></i>
+            </h1>
+            <h3>Crear nuevo auto </h3>
+            <Link to="/create" className="btn btn-primary mt-2 mt-4">
+              Ingresar Vehículo <i class="fa-solid fa-plus"></i>
+            </Link>
+            <p>
+              Haga click en el boton para ingresar un nuevo producto, luego
+              ingrese los datos en la ventana a continuacion
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default CompShowProducts;
