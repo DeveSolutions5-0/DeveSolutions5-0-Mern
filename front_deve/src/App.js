@@ -7,12 +7,13 @@ import CompEditProducts from './Product/EditAutos';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
+
 function App() {
   return (
-    <div className="App">
+    <div className="App">    
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        
+      
       </header>
       <BrowserRouter>
         <Routes>
@@ -23,6 +24,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
+      
     </div>
   );
 }

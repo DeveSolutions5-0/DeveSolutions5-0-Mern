@@ -33,10 +33,10 @@ const CompShowProducts = () => {
 
   //retornemos la respuesta al html utilizando jsx
   return (
-    <div className="container">
+    <div className="container p-3 border bg-light">
       <div className="row justify-content-center gap-3 my-2">
-      <h1> Lista de vehículos disponibles - <i class="fa-duotone fa-person-military-pointing"></i></h1>
-        <div className="col-7 border rounded-3 my-auto">
+      <h1> Lista de vehículos disponibles - <i class="fa-solid fa-list-check"></i></h1>
+        <div className="col-7 border rounded-3 p-3 my-auto border bg-white">
           <table className="table">
             <thead>
               <tr>
@@ -60,8 +60,8 @@ const CompShowProducts = () => {
             </tbody>
           </table>
         </div>
-        <div className="col border rounded-3 my-0">
-        <div className="col">
+        <div className="col border rounded-3  p-3">
+        <div className="col border rounded-3 p-3 bg-white" >
         <h1><i class="fa-sharp fa-solid fa-car-side"></i></h1>
         <h3>Crear nuevo auto </h3>
         <Link to ="/create" className= "btn btn-primary mt-2 mt-4">Ingresar Vehículo <i class="fa-solid fa-plus"></i></Link> 
