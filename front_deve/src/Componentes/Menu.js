@@ -1,5 +1,6 @@
 import logo from "../logoa.png";
 
+
 function Menu() {
   return (
     <nav class="navbar navbar-dark bg-black">
@@ -24,10 +25,10 @@ function Menu() {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">
+          <a class="nav-link" href="/store">
             Carrito
           </a>
-        </li>
+          </li>
       </ul>
     </nav>
   );

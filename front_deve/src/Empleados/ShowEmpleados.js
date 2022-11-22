@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { u3 } from "../module/urlModule.js";
 
-//vamos a usar el endpoint creado en back routes
-
-const URI = "http://localhost:3001/empleados/";
+const URI = u3;
 
 //creamos la funcion de los componentes que vamos a implemetar,
 //todo el codigo debe quedar dentro de esta funcion

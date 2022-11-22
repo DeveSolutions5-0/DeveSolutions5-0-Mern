@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { u3 } from "../module/urlModule.js";
 
-const URI = "http://localhost:3001/empleados/";
+const URI = u3;
 
 
 //creamos componente para nuevos empleados

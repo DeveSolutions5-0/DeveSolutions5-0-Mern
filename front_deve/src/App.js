@@ -10,6 +10,8 @@ import CompShowEmpleados from './Empleados/ShowEmpleados';
 import CompEditEmpleados from './Empleados/EditEmpleados';
 import Menu from './Componentes/Menu';
 import CompLogin from './login/login';
+import CompShowStore from './store/ShowStore';
+import CompShowBuy from './store/ShowBuy';
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route path='/empleados' element={<CompShowEmpleados/>}></Route>;
           <Route path='/empleados/edit/:id' element={<CompEditEmpleados/>}></Route>;
           <Route path='/' element={<CompLogin/>}></Route>;
+          <Route path='/store' element={<CompShowStore/>}/>
+          <Route path='/buy' element={<CompShowBuy/>}/>
           
 
         </Routes>

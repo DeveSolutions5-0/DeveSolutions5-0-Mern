@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { u } from "../module/urlModule.js";
 
-const URI = "http://localhost:3001/autos/";
+const URI = u;
 
 //creamos componente para nuevos productos
 
