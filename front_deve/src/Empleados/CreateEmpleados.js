@@ -3,30 +3,31 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const URI = "http://localhost:3001/autos/";
+const URI = "http://localhost:3001/empleados/";
 
-//creamos componente para nuevos productos
 
-const CompCreateProducts = () => {
+//creamos componente para nuevos empleados
+
+const CompCreateEmpleados = () => {
   //Sec onfiguran los Hooks
 
-  const [marca, setMarca] = useState("");
-  const [stock, setStock] = useState("");
-  const [precio, setPrecio] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [cargo, setCargo] = useState("");
   //configuramos el navegador
   const navigate = useNavigate();
 
-  //se crea procedimiento para guardar un nuevo auto
+  //se crea procedimiento para guardar un nuevo empleado
 
   const nuevo = async (e) => {
     e.preventDefault();
-    await axios.post(URI, { marca: marca, stock: stock, precio: precio });
-    navigate("/");
+    await axios.post(URI, { nombre: nombre, correo: correo, cargo: cargo });
+    navigate("/empleados");
   };
 
   return (
     <div>
-      <h1>Crear Autos</h1>
+      <h1>Crear Empleados</h1>
       <form onSubmit={nuevo} className="p-3 border bg-light">
         <div className="row mb-2 justify-content-center">
           <label className="col-sm-2 col-form-label col-form-label-sm">
@@ -34,8 +35,8 @@ const CompCreateProducts = () => {
           </label>
           <div className="col-sm-4">
             <input
-              value={marca}
-              onChange={(e) => setMarca(e.target.value)}
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
               type="text"
               className="form-control form-control-sm"
             />
@@ -43,26 +44,26 @@ const CompCreateProducts = () => {
         </div>
         <div className="row mb-2 justify-content-center">
           <label className="col-sm-2 col-form-label col-form-label-sm">
-            Stock
+            Correo
           </label>
           <div className="col-sm-4">
             <textarea
-              value={stock}
-              onChange={(e) => setStock(e.target.value)}
-              type="number"
+              value={correo}
+              onChange={(e) => setCorreo(e.target.value)}
+              type="text"
               className="form-control form-control-sm"
             />
           </div>
         </div>
         <div className="row mb-2 justify-content-center">
           <label className="col-sm-2 col-form-label col-form-label-sm">
-            Precio
+            Cargo
           </label>
           <div className="col-sm-4">
             <input
-              value={precio}
-              onChange={(e) => setPrecio(e.target.value)}
-              type="number"
+              value={cargo}
+              onChange={(e) => setCargo(e.target.value)}
+              type="text"
               className="form-control form-control-sm"
             />
           </div>
@@ -77,7 +78,7 @@ const CompCreateProducts = () => {
     
 
       <div class="p-3" >
-        <Link to="/">
+        <Link to="/empleados">
           <button type="button" className="btn btn-success">Volver</button>
         </Link>
       </div>
@@ -85,4 +86,4 @@ const CompCreateProducts = () => {
   );
 };
 
-export default CompCreateProducts;
+export default CompCreateEmpleados;
