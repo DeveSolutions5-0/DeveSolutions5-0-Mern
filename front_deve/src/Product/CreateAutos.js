@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { u } from "../module/urlModule.js";
 
-const URI = "http://localhost:3001/autos/";
+const URI = u;
 
 //creamos componente para nuevos productos
 
@@ -21,7 +22,7 @@ const CompCreateProducts = () => {
   const nuevo = async (e) => {
     e.preventDefault();
     await axios.post(URI, { marca: marca, stock: stock, precio: precio });
-    navigate("/");
+    navigate("/view");
   };
 
   return (
@@ -77,7 +78,7 @@ const CompCreateProducts = () => {
     
 
       <div class="p-3" >
-        <Link to="/">
+        <Link to="/view">
           <button type="button" className="btn btn-success">Volver</button>
         </Link>
       </div>

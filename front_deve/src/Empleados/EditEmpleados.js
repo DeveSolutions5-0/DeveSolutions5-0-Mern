@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { u3 } from "../module/urlModule.js";
 
-const URI = "http://localhost:3001/empleados/";
+const URI = u3;
 
 //creamos el componente de edicion
 

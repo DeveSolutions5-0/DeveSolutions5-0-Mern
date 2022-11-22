@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { u } from "../module/urlModule.js";
 
-const URI = "http://localhost:3001/autos/";
+const URI = u;
+
 
 //creamos el componente de edicion
 
@@ -24,7 +26,7 @@ const CompEditProducts = () => {
   const update = async (e) => {
     e.preventDefault();
     await axios.put(URI + id, { marca: marca, stock: stock, precio: precio });
-    navigate("/");
+    navigate("/view");
   };
 
   //aqui se busca el producto con el id esto se ejecuta antes del procedimiento de actualizar
