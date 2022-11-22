@@ -8,13 +8,18 @@ function Menu() {
       </div>
 
       <ul class="nav justify-content-center">
+      <li class="nav-item">
+          <a class="nav-link active" href="/">
+            Inicio
+          </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" href="/empleados">
             Empleados
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">
+          <a class="nav-link" href="/view">
             Autos
           </a>
         </li>

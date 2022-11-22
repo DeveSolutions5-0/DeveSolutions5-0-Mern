@@ -9,6 +9,7 @@ import CompCreateEmpleados from './Empleados/CreateEmpleados';
 import CompShowEmpleados from './Empleados/ShowEmpleados';
 import CompEditEmpleados from './Empleados/EditEmpleados';
 import Menu from './Componentes/Menu';
+import CompLogin from './login/login';
 
 
 function App() {
@@ -21,12 +22,15 @@ function App() {
       <div>
       <BrowserRouter>
         <Routes>
-          <Route path='' element={<CompShowProducts/>}></Route>;
+          <Route path='/view' element={<CompShowProducts/>}></Route>;
           <Route path='/create' element={<CompCreateProducts/>}></Route>;
           <Route path='/edit/:id' element={<CompEditProducts/>}></Route>;
           <Route path='/empleados/create' element={<CompCreateEmpleados/>}></Route>;
           <Route path='/empleados' element={<CompShowEmpleados/>}></Route>;
           <Route path='/empleados/edit/:id' element={<CompEditEmpleados/>}></Route>;
+          <Route path='/' element={<CompLogin/>}></Route>;
+          
+
         </Routes>
       </BrowserRouter>
       </div>      

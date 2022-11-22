@@ -21,7 +21,7 @@ const CompCreateProducts = () => {
   const nuevo = async (e) => {
     e.preventDefault();
     await axios.post(URI, { marca: marca, stock: stock, precio: precio });
-    navigate("/");
+    navigate("/view");
   };
 
   return (
@@ -77,7 +77,7 @@ const CompCreateProducts = () => {
     
 
       <div class="p-3" >
-        <Link to="/">
+        <Link to="/view">
           <button type="button" className="btn btn-success">Volver</button>
         </Link>
       </div>
