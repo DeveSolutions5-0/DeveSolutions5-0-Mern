@@ -1,4 +1,4 @@
 
-export const u = 'http://localhost:3001/autos/';
-export const u2 = 'http://localhost:3001/cars/';
-export const u3 = 'http://localhost:3001/empleados/';
+export const u = 'https://devesolutions.herokuapp.com/autos/';
+export const u2 = 'https://devesolutions.herokuapp.com/cars/';
+export const u3 = 'https://devesolutions.herokuapp.com/empleados/';

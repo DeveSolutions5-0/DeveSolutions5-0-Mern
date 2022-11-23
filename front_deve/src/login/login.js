@@ -22,7 +22,21 @@ const CompLogin = ()=>{
     };
 
     return(
+        
         <div className="container">
+
+            <div className="row justify-content-center my-5 ">
+                <div className="col border rounded-3 my-auto mx-auto">
+                <h2 class="text-success">Mintic 2022 - Grupos 15 - 16 - Desarrollo Web</h2>
+                <h4 class="text-success">Edwin Fernando Vasco - DeveSolutions5.0</h4>
+                </div>
+            </div>  
+            <div className="row justify-content-center my-5 bg-primary text-white">
+                <div className="col border rounded-3 my-auto mx-auto">
+                <h4>Haga click en su rol a continuación para iniciar sesión</h4>
+                </div>
+            </div>  
+        
             <div className="row justify-content-center my-5">
                 <div className="col border rounded-3 my-auto mx-auto">
                     <form className="form-control-lg" onSubmit={elegir}>
